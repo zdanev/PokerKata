@@ -21,10 +21,10 @@ namespace PokerKata
             {
                 // iteration 1: var faces = Cards.Select(c => c.Face).Distinct().Count();
 
-                var colors = Cards.Select(c => c.Color).Distinct().Count();
+                var colors = Cards.Select(c => c.Suit).Distinct().Count();
 
                 var faces = Cards
-                    .GroupBy(c => c.Face)
+                    .GroupBy(c => c.Rank)
                     .Select(g => new {Face = g.Key, Count = g.Count()})
                     .OrderByDescending(x => x.Count);
 
@@ -56,9 +56,24 @@ namespace PokerKata
 
         private bool IsStraight()
         {
-            var orderedCards = Cards.OrderBy(c => c.Face).ToArray();
-            for (int i = 1; i < 5; i++)
-                if ((int) (orderedCards[i].Face) != 1 + (int) (orderedCards[i - 1].Face)) return false;
+            var orderedCards = Cards.OrderBy(c => c.Rank).ToArray();
+
+            if (orderedCards[0].Rank == Rank.Two)
+            {
+                if (orderedCards[4].Rank != Rank.Ace) return false;
+
+                for (int i = 1; i < 4; i++)
+                {
+                    if ((int)(orderedCards[i].Rank) != 1 + (int)(orderedCards[i - 1].Rank)) return false;
+                }
+            }
+            else
+            {
+                for (int i = 1; i < 5; i++)
+                {
+                    if ((int)(orderedCards[i].Rank) != 1 + (int)(orderedCards[i - 1].Rank)) return false;
+                }
+            }
 
             return true;
         }

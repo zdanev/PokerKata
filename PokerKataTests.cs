@@ -9,13 +9,13 @@ namespace PokerKata
         public void HandHasFiveCards()
         {
             // arrange
-            var hand = new Hand(new Card[]
+            var hand = new Hand(new[]
             {
-                new Card { Face = CardFace.Two, Color = CardColor.Clubs },
-                new Card { Face = CardFace.Four, Color = CardColor.Diamonds },
-                new Card { Face = CardFace.Six, Color = CardColor.Spades },
-                new Card { Face = CardFace.Eight, Color = CardColor.Hearts },
-                new Card { Face = CardFace.Ten, Color = CardColor.Clubs }
+                new Card { Rank = Rank.Two, Suit = Suit.Clubs },
+                new Card { Rank = Rank.Four, Suit = Suit.Diamonds },
+                new Card { Rank = Rank.Six, Suit = Suit.Spades },
+                new Card { Rank = Rank.Eight, Suit = Suit.Hearts },
+                new Card { Rank = Rank.Ten, Suit = Suit.Clubs }
             });
 
             // act
@@ -29,13 +29,13 @@ namespace PokerKata
         public void HighCard()
         {
             // arrange
-            var hand = new Hand(new Card[]
+            var hand = new Hand(new[]
             {
-                new Card { Face = CardFace.Two, Color = CardColor.Clubs },
-                new Card { Face = CardFace.Four, Color = CardColor.Diamonds },
-                new Card { Face = CardFace.Six, Color = CardColor.Spades },
-                new Card { Face = CardFace.Eight, Color = CardColor.Hearts },
-                new Card { Face = CardFace.Ten, Color = CardColor.Clubs }
+                new Card { Rank = Rank.Two, Suit = Suit.Clubs },
+                new Card { Rank = Rank.Four, Suit = Suit.Diamonds },
+                new Card { Rank = Rank.Six, Suit = Suit.Spades },
+                new Card { Rank = Rank.Eight, Suit = Suit.Hearts },
+                new Card { Rank = Rank.Ten, Suit = Suit.Clubs }
             });
 
             // act
@@ -49,13 +49,13 @@ namespace PokerKata
         public void OnePair()
         {
             // arrange
-            var hand = new Hand(new Card[]
+            var hand = new Hand(new[]
             {
-                new Card { Face = CardFace.King, Color = CardColor.Clubs },
-                new Card { Face = CardFace.King, Color = CardColor.Diamonds },
-                new Card { Face = CardFace.Six, Color = CardColor.Spades },
-                new Card { Face = CardFace.Eight, Color = CardColor.Hearts },
-                new Card { Face = CardFace.Ten, Color = CardColor.Clubs }
+                new Card { Rank = Rank.King, Suit = Suit.Clubs },
+                new Card { Rank = Rank.King, Suit = Suit.Diamonds },
+                new Card { Rank = Rank.Six, Suit = Suit.Spades },
+                new Card { Rank = Rank.Eight, Suit = Suit.Hearts },
+                new Card { Rank = Rank.Ten, Suit = Suit.Clubs }
             });
 
             // act
@@ -69,13 +69,13 @@ namespace PokerKata
         public void TwoPairs()
         {
             // arrange
-            var hand = new Hand(new Card[]
+            var hand = new Hand(new[]
             {
-                new Card { Face = CardFace.King, Color = CardColor.Clubs },
-                new Card { Face = CardFace.King, Color = CardColor.Diamonds },
-                new Card { Face = CardFace.Queen, Color = CardColor.Spades },
-                new Card { Face = CardFace.Queen, Color = CardColor.Hearts },
-                new Card { Face = CardFace.Ten, Color = CardColor.Clubs }
+                new Card { Rank = Rank.King, Suit = Suit.Clubs },
+                new Card { Rank = Rank.King, Suit = Suit.Diamonds },
+                new Card { Rank = Rank.Queen, Suit = Suit.Spades },
+                new Card { Rank = Rank.Queen, Suit = Suit.Hearts },
+                new Card { Rank = Rank.Ten, Suit = Suit.Clubs }
             });
 
             // act
@@ -89,13 +89,13 @@ namespace PokerKata
         public void ThreeOfKind()
         {
             // arrange
-            var hand = new Hand(new Card[]
+            var hand = new Hand(new[]
             {
-                new Card { Face = CardFace.King, Color = CardColor.Clubs },
-                new Card { Face = CardFace.King, Color = CardColor.Diamonds },
-                new Card { Face = CardFace.King, Color = CardColor.Spades },
-                new Card { Face = CardFace.Queen, Color = CardColor.Hearts },
-                new Card { Face = CardFace.Ten, Color = CardColor.Clubs }
+                new Card { Rank = Rank.King, Suit = Suit.Clubs },
+                new Card { Rank = Rank.King, Suit = Suit.Diamonds },
+                new Card { Rank = Rank.King, Suit = Suit.Spades },
+                new Card { Rank = Rank.Queen, Suit = Suit.Hearts },
+                new Card { Rank = Rank.Ten, Suit = Suit.Clubs }
             });
 
             // act
@@ -109,13 +109,13 @@ namespace PokerKata
         public void FourOfKind()
         {
             // arrange
-            var hand = new Hand(new Card[]
+            var hand = new Hand(new[]
             {
-                new Card { Face = CardFace.King, Color = CardColor.Clubs },
-                new Card { Face = CardFace.King, Color = CardColor.Diamonds },
-                new Card { Face = CardFace.King, Color = CardColor.Spades },
-                new Card { Face = CardFace.King, Color = CardColor.Hearts },
-                new Card { Face = CardFace.Ten, Color = CardColor.Clubs }
+                new Card { Rank = Rank.King, Suit = Suit.Clubs },
+                new Card { Rank = Rank.King, Suit = Suit.Diamonds },
+                new Card { Rank = Rank.King, Suit = Suit.Spades },
+                new Card { Rank = Rank.King, Suit = Suit.Hearts },
+                new Card { Rank = Rank.Ten, Suit = Suit.Clubs }
             });
 
             // act
@@ -129,13 +129,13 @@ namespace PokerKata
         public void FullHouse()
         {
             // arrange
-            var hand = new Hand(new Card[]
+            var hand = new Hand(new[]
             {
-                new Card { Face = CardFace.King, Color = CardColor.Clubs },
-                new Card { Face = CardFace.King, Color = CardColor.Diamonds },
-                new Card { Face = CardFace.King, Color = CardColor.Spades },
-                new Card { Face = CardFace.Queen, Color = CardColor.Hearts },
-                new Card { Face = CardFace.Queen, Color = CardColor.Clubs }
+                new Card { Rank = Rank.King, Suit = Suit.Clubs },
+                new Card { Rank = Rank.King, Suit = Suit.Diamonds },
+                new Card { Rank = Rank.King, Suit = Suit.Spades },
+                new Card { Rank = Rank.Queen, Suit = Suit.Hearts },
+                new Card { Rank = Rank.Queen, Suit = Suit.Clubs }
             });
 
             // act
@@ -149,13 +149,33 @@ namespace PokerKata
         public void Straight()
         {
             // arrange
-            var hand = new Hand(new Card[]
+            var hand = new Hand(new[]
             {
-                new Card { Face = CardFace.Five, Color = CardColor.Clubs },
-                new Card { Face = CardFace.Six, Color = CardColor.Diamonds },
-                new Card { Face = CardFace.Seven, Color = CardColor.Spades },
-                new Card { Face = CardFace.Eight, Color = CardColor.Hearts },
-                new Card { Face = CardFace.Nine, Color = CardColor.Clubs }
+                new Card { Rank = Rank.Five, Suit = Suit.Clubs },
+                new Card { Rank = Rank.Six, Suit = Suit.Diamonds },
+                new Card { Rank = Rank.Seven, Suit = Suit.Spades },
+                new Card { Rank = Rank.Eight, Suit = Suit.Hearts },
+                new Card { Rank = Rank.Nine, Suit = Suit.Clubs }
+            });
+
+            // act
+            var result = hand.Value;
+
+            // assert
+            Assert.AreEqual(HandValue.Straight, result);
+        }
+
+        [TestMethod]
+        public void Straight2()
+        {
+            // arrange
+            var hand = new Hand(new[]
+            {
+                new Card { Rank = Rank.Ace, Suit = Suit.Clubs },
+                new Card { Rank = Rank.Two, Suit = Suit.Diamonds },
+                new Card { Rank = Rank.Three, Suit = Suit.Spades },
+                new Card { Rank = Rank.Four, Suit = Suit.Hearts },
+                new Card { Rank = Rank.Five, Suit = Suit.Clubs }
             });
 
             // act
@@ -171,11 +191,11 @@ namespace PokerKata
             // arrange
             var hand = new Hand(new Card[]
             {
-                new Card { Face = CardFace.Three, Color = CardColor.Diamonds },
-                new Card { Face = CardFace.Five, Color = CardColor.Diamonds },
-                new Card { Face = CardFace.Seven, Color = CardColor.Diamonds },
-                new Card { Face = CardFace.Nine, Color = CardColor.Diamonds },
-                new Card { Face = CardFace.Ten, Color = CardColor.Diamonds }
+                new Card { Rank = Rank.Three, Suit = Suit.Diamonds },
+                new Card { Rank = Rank.Five, Suit = Suit.Diamonds },
+                new Card { Rank = Rank.Seven, Suit = Suit.Diamonds },
+                new Card { Rank = Rank.Nine, Suit = Suit.Diamonds },
+                new Card { Rank = Rank.Ten, Suit = Suit.Diamonds }
             });
 
             // act
@@ -191,11 +211,11 @@ namespace PokerKata
             // arrange
             var hand = new Hand(new Card[]
             {
-                new Card { Face = CardFace.Five, Color = CardColor.Diamonds },
-                new Card { Face = CardFace.Six, Color = CardColor.Diamonds },
-                new Card { Face = CardFace.Seven, Color = CardColor.Diamonds },
-                new Card { Face = CardFace.Eight, Color = CardColor.Diamonds },
-                new Card { Face = CardFace.Nine, Color = CardColor.Diamonds }
+                new Card { Rank = Rank.Five, Suit = Suit.Diamonds },
+                new Card { Rank = Rank.Six, Suit = Suit.Diamonds },
+                new Card { Rank = Rank.Seven, Suit = Suit.Diamonds },
+                new Card { Rank = Rank.Eight, Suit = Suit.Diamonds },
+                new Card { Rank = Rank.Nine, Suit = Suit.Diamonds }
             });
 
             // act

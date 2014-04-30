@@ -2,8 +2,8 @@
 {
     public class Card
     {
-        public CardColor Color { get; set; }
+        public Suit Suit { get; set; }
 
-        public CardFace Face { get; set; }
+        public Rank Rank { get; set; }
     }
 }
