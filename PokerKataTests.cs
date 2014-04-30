@@ -145,6 +145,7 @@ namespace PokerKata
             Assert.AreEqual(HandValue.FullHouse, result);
         }
 
+
         [TestMethod]
         public void Straight()
         {
@@ -186,10 +187,30 @@ namespace PokerKata
         }
 
         [TestMethod]
+        public void Straight3()
+        {
+            // arrange
+            var hand = new Hand(new[]
+            {
+                new Card { Rank = Rank.Three, Suit = Suit.Clubs },
+                new Card { Rank = Rank.Six, Suit = Suit.Diamonds },
+                new Card { Rank = Rank.Two, Suit = Suit.Spades },
+                new Card { Rank = Rank.Five, Suit = Suit.Hearts },
+                new Card { Rank = Rank.Four, Suit = Suit.Clubs }
+            });
+
+            // act
+            var result = hand.Value;
+
+            // assert
+            Assert.AreEqual(HandValue.Straight, result);
+        }
+
+        [TestMethod]
         public void Flush()
         {
             // arrange
-            var hand = new Hand(new Card[]
+            var hand = new Hand(new[]
             {
                 new Card { Rank = Rank.Three, Suit = Suit.Diamonds },
                 new Card { Rank = Rank.Five, Suit = Suit.Diamonds },
@@ -209,7 +230,7 @@ namespace PokerKata
         public void StraightFlush()
         {
             // arrange
-            var hand = new Hand(new Card[]
+            var hand = new Hand(new[]
             {
                 new Card { Rank = Rank.Five, Suit = Suit.Diamonds },
                 new Card { Rank = Rank.Six, Suit = Suit.Diamonds },

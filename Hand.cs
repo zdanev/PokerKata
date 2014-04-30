@@ -58,10 +58,8 @@ namespace PokerKata
         {
             var orderedCards = Cards.OrderBy(c => c.Rank).ToArray();
 
-            if (orderedCards[0].Rank == Rank.Two)
+            if (orderedCards[0].Rank == Rank.Two && orderedCards[4].Rank == Rank.Ace)
             {
-                if (orderedCards[4].Rank != Rank.Ace) return false;
-
                 for (int i = 1; i < 4; i++)
                 {
                     if ((int)(orderedCards[i].Rank) != 1 + (int)(orderedCards[i - 1].Rank)) return false;
